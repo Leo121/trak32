@@ -1,7 +1,7 @@
 
 //#include "common.h"
 #include <xc.h>
-#include <plib.h>
+//#include <plib.h>
 #include "common.h"
 #include "trakhardware.h"
 #include "trakserial.h"

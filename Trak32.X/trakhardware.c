@@ -1,5 +1,5 @@
 #include <p32xxxx.h>
-#include <plib.h>
+//#include <plib.h>
 #include <xc.h>
 #include "trakhardware.h"
 #include "common.h"

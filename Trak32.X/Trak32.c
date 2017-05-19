@@ -1,10 +1,11 @@
 
 // Includes Section
+#include <xc.h>
+#include <sys/attribs.h>        //note: this include is needed for interrupts
+#include <p32xxxx.h>
 #include "common.h"
 #include "trakhardware.h"
-#include <p32xxxx.h>
-#include <plib.h>
-#include <xc.h>
+//#include <plib.h>
 #include <stdio.h>
 #include "trakserial.h"
 #include "trakcommands.h"
@@ -64,7 +65,10 @@
 int main(void)
 {
     InitializeHardware();
-    INTEnableSystemMultiVectoredInt();
+//    INTEnableSystemMultiVectoredInt();
+  
+    
+    
     
     LED_ONB1 = 1;
     LED_ONB2 = 1;
@@ -249,7 +253,7 @@ void _general_exception_handler(unsigned cause, unsigned status)
   ***************************************************************************/
 void InitializeTimer3(void)
 {
-    WORD timerPeriod;
+    uint32 timerPeriod;
 
     IPC3bits.T3IP = TIMER_INTERRUPT_PRIORITY;
     IFS0bits.T3IF = 0;
@@ -318,6 +322,7 @@ void InitializeTimer4(void)
   ***************************************************************************/
 
 void __ISR(_TIMER_4_VECTOR, IPL3SOFT) _T4Interrupt(void)
+//void __ISR(_TIMER_4_VECTOR, IPL3SRS) _T4Interrupt(void)
 //void __ISR_AT_VECTOR(_TIMER_4_VECTOR, ipl3) _T4Interrupt(void)
 {
 	    if (IFS0bits.T4IF)
@@ -328,7 +333,7 @@ void __ISR(_TIMER_4_VECTOR, IPL3SOFT) _T4Interrupt(void)
 
 
 void __ISR(_TIMER_3_VECTOR, IPL2SOFT) _T3Interrupt( void )
-//void __ISR_AT_VECTOR(_TIMER_3_VECTOR, ipl2) _T3Interrupt(void)
+//void __ISR_AT_VECTOR(_TIMER_3_VECTOR, IPL2SRS) _T3Interrupt(void)
 {
     static unsigned int counts;
     if (IFS0bits.T3IF)
