@@ -13,8 +13,8 @@
       <itemPath>trakbarometer.h</itemPath>
       <itemPath>trakeep.h</itemPath>
       <itemPath>trakaccel.h</itemPath>
-      <itemPath>../P32MXlib/p32_i2c2.h</itemPath>
       <itemPath>trakADC.h</itemPath>
+      <itemPath>../../Trak32.X/p32_i2c2.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -31,8 +31,8 @@
       <itemPath>trakbarometer.c</itemPath>
       <itemPath>trakeep.c</itemPath>
       <itemPath>trakaccel.c</itemPath>
-      <itemPath>../P32MXlib/p32_i2c2.c</itemPath>
       <itemPath>trakADC.c</itemPath>
+      <itemPath>../../Trak32.X/p32_i2c2.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -43,6 +43,7 @@
   <sourceRootList>
     <Elem>../P32MXlib</Elem>
     <Elem>.</Elem>
+    <Elem>../../Trak32.X</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
