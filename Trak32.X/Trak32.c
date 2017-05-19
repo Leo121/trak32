@@ -9,6 +9,7 @@
 #include <stdio.h>
 #include "trakserial.h"
 #include "trakcommands.h"
+#include "trak-ints.h"
 
 
 // Configuration Section
@@ -66,10 +67,8 @@ int main(void)
 {
     InitializeHardware();
 //    INTEnableSystemMultiVectoredInt();
-  
-    
-    
-    
+    InitializeInterrupts();
+        
     LED_ONB1 = 1;
     LED_ONB2 = 1;
     DelayByCounts(1000);
@@ -98,15 +97,15 @@ int main(void)
 
 
 
-/*************************************************************************
- general exception handler
- *************************************************************************/
-
-void _general_exception_handler(unsigned cause, unsigned status)
-{
-    Nop();
-    Nop();
-}
+///*************************************************************************
+// general exception handler
+// *************************************************************************/
+//
+//void _general_exception_handler(unsigned cause, unsigned status)
+//{
+//    Nop();
+//    Nop();
+//}
 
 /*************************************************************************
  Interrupts
@@ -321,34 +320,34 @@ void InitializeTimer4(void)
     None
   ***************************************************************************/
 
-void __ISR(_TIMER_4_VECTOR, IPL3SOFT) _T4Interrupt(void)
-//void __ISR(_TIMER_4_VECTOR, IPL3SRS) _T4Interrupt(void)
-//void __ISR_AT_VECTOR(_TIMER_4_VECTOR, ipl3) _T4Interrupt(void)
-{
-	    if (IFS0bits.T4IF)
-	    {
-	        IFS0bits.T4IF   = 0;
-	    }
-}
+//void __ISR(_TIMER_4_VECTOR, IPL3SOFT) _T4Interrupt(void)
+////void __ISR(_TIMER_4_VECTOR, IPL3SRS) _T4Interrupt(void)
+////void __ISR_AT_VECTOR(_TIMER_4_VECTOR, ipl3) _T4Interrupt(void)
+//{
+//	    if (IFS0bits.T4IF)
+//	    {
+//	        IFS0bits.T4IF   = 0;
+//	    }
+//}
 
 
-void __ISR(_TIMER_3_VECTOR, IPL2SOFT) _T3Interrupt( void )
-//void __ISR_AT_VECTOR(_TIMER_3_VECTOR, IPL2SRS) _T3Interrupt(void)
-{
-    static unsigned int counts;
-    if (IFS0bits.T3IF)
-    {
-        IFS0bits.T3IF = 0;
-//        SYSTEM_CLOCK_TOGGLE ^= 1;
-        if(DelayTicks > 0) DelayTicks--;
-        counts++;
-        if(counts >= 500)
-        {
-            LED_ONB2^=1;
-            counts = 0;
-        }
-//        if(AnalogSampleCtr > 0) AnalogSampleCtr--;
-//        if(MasterStateCtr > 0) MasterStateCtr--;        
-        SystemTicks++;
-    }
-}
+//void __ISR(_TIMER_3_VECTOR, IPL2SOFT) _T3Interrupt( void )
+////void __ISR_AT_VECTOR(_TIMER_3_VECTOR, IPL2SRS) _T3Interrupt(void)
+//{
+//    static unsigned int counts;
+//    if (IFS0bits.T3IF)
+//    {
+//        IFS0bits.T3IF = 0;
+////        SYSTEM_CLOCK_TOGGLE ^= 1;
+//        if(DelayTicks > 0) DelayTicks--;
+//        counts++;
+//        if(counts >= 500)
+//        {
+//            LED_ONB2^=1;
+//            counts = 0;
+//        }
+////        if(AnalogSampleCtr > 0) AnalogSampleCtr--;
+////        if(MasterStateCtr > 0) MasterStateCtr--;        
+//        SystemTicks++;
+//    }
+//}

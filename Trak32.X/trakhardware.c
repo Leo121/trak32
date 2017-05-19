@@ -4,6 +4,13 @@
 #include "trakhardware.h"
 #include "common.h"
 
+#ifndef TRUE
+#define TRUE 1
+#endif
+
+#ifndef FALSE
+#define FALSE 0
+#endif
 
 uint16 DelayTicks;
 uint32 SystemTicks = 0;

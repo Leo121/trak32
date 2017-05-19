@@ -1,5 +1,5 @@
-build/MX695/production/Trak32.o:  \
-Trak32.c  \
+build/MX795/production/trak-ints.o:  \
+trak-ints.c  \
 common.h  \
 trakhardware.h  \
  trakserial.h  \

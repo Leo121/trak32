@@ -15,6 +15,7 @@
       <itemPath>trakaccel.h</itemPath>
       <itemPath>trakADC.h</itemPath>
       <itemPath>p32_i2c2.h</itemPath>
+      <itemPath>trak-ints.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -33,6 +34,7 @@
       <itemPath>trakaccel.c</itemPath>
       <itemPath>trakADC.c</itemPath>
       <itemPath>p32_i2c2.c</itemPath>
+      <itemPath>trak-ints.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -70,8 +72,6 @@
           <parseOnProdLoad>true</parseOnProdLoad>
           <alternateLoadableFile></alternateLoadableFile>
         </loading>
-        <subordinates>
-        </subordinates>
       </compileType>
       <makeCustomizationType>
         <makeCustomizationPreStepEnabled>false</makeCustomizationPreStepEnabled>
@@ -300,8 +300,6 @@
           <parseOnProdLoad>true</parseOnProdLoad>
           <alternateLoadableFile></alternateLoadableFile>
         </loading>
-        <subordinates>
-        </subordinates>
       </compileType>
       <makeCustomizationType>
         <makeCustomizationPreStepEnabled>false</makeCustomizationPreStepEnabled>
