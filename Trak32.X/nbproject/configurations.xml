@@ -14,7 +14,7 @@
       <itemPath>trakeep.h</itemPath>
       <itemPath>trakaccel.h</itemPath>
       <itemPath>trakADC.h</itemPath>
-      <itemPath>../../Trak32.X/p32_i2c2.h</itemPath>
+      <itemPath>p32_i2c2.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -32,7 +32,7 @@
       <itemPath>trakeep.c</itemPath>
       <itemPath>trakaccel.c</itemPath>
       <itemPath>trakADC.c</itemPath>
-      <itemPath>../../Trak32.X/p32_i2c2.c</itemPath>
+      <itemPath>p32_i2c2.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -278,7 +278,7 @@
     <conf name="MX695" type="2">
       <toolsSet>
         <developmentServer>localhost</developmentServer>
-        <targetDevice>PIC32MX675F512L</targetDevice>
+        <targetDevice>PIC32MX695F512L</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
         <platformTool>ICD3PlatformTool</platformTool>

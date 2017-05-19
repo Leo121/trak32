@@ -1,13 +1,13 @@
 Archive member included because of file (symbol)
 
-c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(int_enable_mv_int_lib.o)
+c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(int_enable_mv_int_lib.o)
                               build/MX695/production/Trak32.o (INTEnableSystemMultiVectoredInt)
-c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(int_tbl_lib.o)
+c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(int_tbl_lib.o)
                               build/MX695/production/trakserial.o (INTEnable)
-c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(uart_lib.o)
+c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(uart_lib.o)
                               build/MX695/production/trakserial.o (UARTEnable)
-c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(int_enable_interrupts_lib.o)
-                              c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(int_enable_mv_int_lib.o) (INTEnableInterrupts)
+c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(int_enable_interrupts_lib.o)
+                              c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(int_enable_mv_int_lib.o) (INTEnableInterrupts)
 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libpic32.a(memcpy.o)
                               build/MX695/production/Trak32.o (memcpy)
 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libpic32.a(strlen.o)
@@ -169,9 +169,9 @@ section                    address  length [bytes]      (dec)  Description
 .bss                    0xa0000090          0x300         768  Uninitialized data 
 .data                   0xa0000390           0xa0         160  Initialized data 
 .bss                    0xa0000430           0x40          64  Uninitialized data 
-         Total kseg1_data_mem used  :       0x470        1136  1.7% of 0x10000
+         Total kseg1_data_mem used  :       0x470        1136  0.9% of 0x20000
         --------------------------------------------------------------------------
-            Total Data Memory used  :       0x470        1136  1.7% of 0x10000
+            Total Data Memory used  :       0x470        1136  0.9% of 0x20000
         --------------------------------------------------------------------------
 
 
@@ -179,7 +179,7 @@ Dynamic Data-Memory Reservation
 section                    address  length [bytes]      (dec)  Description
 -------                 ----------  -------------------------  -----------
 heap                    0xa0000478           0x10          16  Reserved for heap 
-stack                   0xa00004a0         0xfb58       64344  Reserved for stack 
+stack                   0xa00004a0        0x1fb58      129880  Reserved for stack 
 
         --------------------------------------------------------------------------
 
@@ -204,18 +204,18 @@ Discarded input sections
  .pdr           0x00000000       0x20 build/MX695/production/trakaccel.o
  .reginfo       0x00000000       0x18 build/MX695/production/trakADC.o
  .pdr           0x00000000      0x1e0 build/MX695/production/trakADC.o
- .reginfo       0x00000000       0x18 build/MX695/production/_ext/164137329/p32_i2c2.o
- .pdr           0x00000000      0x120 build/MX695/production/_ext/164137329/p32_i2c2.o
- .reginfo       0x00000000       0x18 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX675F512L\processor.o
- .pdr           0x00000000        0x0 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX675F512L\processor.o
- .reginfo       0x00000000       0x18 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(int_enable_mv_int_lib.o)
- .pdr           0x00000000       0x20 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(int_enable_mv_int_lib.o)
- .reginfo       0x00000000       0x18 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(int_tbl_lib.o)
- .pdr           0x00000000      0x120 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(int_tbl_lib.o)
- .reginfo       0x00000000       0x18 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(uart_lib.o)
- .pdr           0x00000000      0x100 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(uart_lib.o)
- .reginfo       0x00000000       0x18 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(int_enable_interrupts_lib.o)
- .pdr           0x00000000       0x20 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(int_enable_interrupts_lib.o)
+ .reginfo       0x00000000       0x18 build/MX695/production/p32_i2c2.o
+ .pdr           0x00000000      0x120 build/MX695/production/p32_i2c2.o
+ .reginfo       0x00000000       0x18 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX695F512L\processor.o
+ .pdr           0x00000000        0x0 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX695F512L\processor.o
+ .reginfo       0x00000000       0x18 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(int_enable_mv_int_lib.o)
+ .pdr           0x00000000       0x20 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(int_enable_mv_int_lib.o)
+ .reginfo       0x00000000       0x18 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(int_tbl_lib.o)
+ .pdr           0x00000000      0x120 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(int_tbl_lib.o)
+ .reginfo       0x00000000       0x18 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(uart_lib.o)
+ .pdr           0x00000000      0x100 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(uart_lib.o)
+ .reginfo       0x00000000       0x18 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(int_enable_interrupts_lib.o)
+ .pdr           0x00000000       0x20 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(int_enable_interrupts_lib.o)
  .reginfo       0x00000000       0x18 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libpic32.a(memcpy.o)
  .pdr           0x00000000       0x20 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libpic32.a(memcpy.o)
  .reginfo       0x00000000       0x18 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libpic32.a(strlen.o)
@@ -269,7 +269,7 @@ config3          0xbfc02ff0         0x00000004
 config2          0xbfc02ff4         0x00000004
 config1          0xbfc02ff8         0x00000004
 config0          0xbfc02ffc         0x00000004
-kseg1_data_mem   0xa0000000         0x00010000         w !x
+kseg1_data_mem   0xa0000000         0x00020000         w !x
 sfrs             0xbf800000         0x00100000
 configsfrs       0xbfc02ff0         0x00000010
 *default*        0x00000000         0xffffffff
@@ -286,15 +286,15 @@ LOAD build/MX695/production/trakbarometer.o
 LOAD build/MX695/production/trakeep.o
 LOAD build/MX695/production/trakaccel.o
 LOAD build/MX695/production/trakADC.o
-LOAD build/MX695/production/_ext/164137329/p32_i2c2.o
+LOAD build/MX695/production/p32_i2c2.o
                 0x00000001                __MPLAB_BUILD = 0x1
                 0x00000400                PROVIDE (_min_stack_size, 0x400)
-LOAD c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX675F512L\processor.o
+LOAD c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX695F512L\processor.o
 START GROUP
 LOAD c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral.a
 END GROUP
 START GROUP
-LOAD c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a
+LOAD c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a
 END GROUP
                 0x00000001                PROVIDE (_vector_spacing, 0x1)
                 0x9fc01000                _ebase_address = 0x9fc01000
@@ -819,8 +819,8 @@ END GROUP
                 0xa0000390                . = ALIGN (0x4)
                 0xa0000390                _end = .
                 0xa0000390                _bss_end = .
-                0x00010000                _bmxdudba_address = 0x10000
-                0x00010000                _bmxdupba_address = 0x10000
+                0x00020000                _bmxdudba_address = 0x20000
+                0x00020000                _bmxdupba_address = 0x20000
 
 /DISCARD/
  *(.pdr)
@@ -850,11 +850,11 @@ END GROUP
  .mdebug.abi32  0xa0000390        0x0 build/MX695/production/trakeep.o
  .mdebug.abi32  0xa0000390        0x0 build/MX695/production/trakaccel.o
  .mdebug.abi32  0xa0000390        0x0 build/MX695/production/trakADC.o
- .mdebug.abi32  0xa0000390        0x0 build/MX695/production/_ext/164137329/p32_i2c2.o
- .mdebug.abi32  0xa0000390        0x0 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(int_enable_mv_int_lib.o)
- .mdebug.abi32  0xa0000390        0x0 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(int_tbl_lib.o)
- .mdebug.abi32  0xa0000390        0x0 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(uart_lib.o)
- .mdebug.abi32  0xa0000390        0x0 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(int_enable_interrupts_lib.o)
+ .mdebug.abi32  0xa0000390        0x0 build/MX695/production/p32_i2c2.o
+ .mdebug.abi32  0xa0000390        0x0 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(int_enable_mv_int_lib.o)
+ .mdebug.abi32  0xa0000390        0x0 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(int_tbl_lib.o)
+ .mdebug.abi32  0xa0000390        0x0 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(uart_lib.o)
+ .mdebug.abi32  0xa0000390        0x0 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(int_enable_interrupts_lib.o)
  .mdebug.abi32  0xa0000390        0x0 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libpic32.a(default-bootstrap-exception-handler.o)
  .mdebug.abi32  0xa0000390        0x0 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libpic32.a(default-on-reset.o)
  .mdebug.abi32  0xa0000390        0x0 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libpic32.a(default-on-bootstrap.o)
@@ -922,12 +922,12 @@ END GROUP
  .comment       0x00000000       0x3d build/MX695/production/trakeep.o
  .comment       0x00000000       0x3d build/MX695/production/trakaccel.o
  .comment       0x00000000       0x3d build/MX695/production/trakADC.o
- .comment       0x00000000       0x3d build/MX695/production/_ext/164137329/p32_i2c2.o
- .comment       0x0000003c       0x51 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(int_enable_mv_int_lib.o)
+ .comment       0x00000000       0x3d build/MX695/production/p32_i2c2.o
+ .comment       0x0000003c       0x51 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(int_enable_mv_int_lib.o)
                                  0x52 (size before relaxing)
- .comment       0x00000000       0x52 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(int_tbl_lib.o)
- .comment       0x00000000       0x52 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(uart_lib.o)
- .comment       0x00000000       0x52 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(int_enable_interrupts_lib.o)
+ .comment       0x00000000       0x52 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(int_tbl_lib.o)
+ .comment       0x00000000       0x52 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(uart_lib.o)
+ .comment       0x00000000       0x52 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(int_enable_interrupts_lib.o)
  .comment       0x0000008d       0x19 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libpic32.a(strlen.o)
                                  0x1a (size before relaxing)
  .comment       0x00000000       0x3d c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libpic32.a(default-bootstrap-exception-handler.o)
@@ -980,15 +980,15 @@ END GROUP
  .debug_aranges
                 0x00000100       0x20 build/MX695/production/trakADC.o
  .debug_aranges
-                0x00000120       0x20 build/MX695/production/_ext/164137329/p32_i2c2.o
+                0x00000120       0x20 build/MX695/production/p32_i2c2.o
  .debug_aranges
-                0x00000140       0x20 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(int_enable_mv_int_lib.o)
+                0x00000140       0x20 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(int_enable_mv_int_lib.o)
  .debug_aranges
-                0x00000160       0x60 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(int_tbl_lib.o)
+                0x00000160       0x60 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(int_tbl_lib.o)
  .debug_aranges
-                0x000001c0       0x58 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(uart_lib.o)
+                0x000001c0       0x58 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(uart_lib.o)
  .debug_aranges
-                0x00000218       0x20 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(int_enable_interrupts_lib.o)
+                0x00000218       0x20 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(int_enable_interrupts_lib.o)
  .debug_aranges
                 0x00000238       0x20 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libpic32.a(default-bootstrap-exception-handler.o)
  .debug_aranges
@@ -1036,15 +1036,15 @@ END GROUP
  .debug_pubnames
                 0x0000060d      0x1a7 build/MX695/production/trakADC.o
  .debug_pubnames
-                0x000007b4       0x7e build/MX695/production/_ext/164137329/p32_i2c2.o
+                0x000007b4       0x7e build/MX695/production/p32_i2c2.o
  .debug_pubnames
-                0x00000832       0x36 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(int_enable_mv_int_lib.o)
+                0x00000832       0x36 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(int_enable_mv_int_lib.o)
  .debug_pubnames
-                0x00000868       0xca c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(int_tbl_lib.o)
+                0x00000868       0xca c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(int_tbl_lib.o)
  .debug_pubnames
-                0x00000932       0xb1 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(uart_lib.o)
+                0x00000932       0xb1 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(uart_lib.o)
  .debug_pubnames
-                0x000009e3       0x2a c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(int_enable_interrupts_lib.o)
+                0x000009e3       0x2a c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(int_enable_interrupts_lib.o)
  .debug_pubnames
                 0x00000a0d       0x33 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libpic32.a(default-bootstrap-exception-handler.o)
  .debug_pubnames
@@ -1070,7 +1070,7 @@ END GROUP
  .debug_pubnames
                 0x00000b86       0x20 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1\libgcc.a(_umoddi3.o)
 
-.debug_info     0x00000000     0xccd4
+.debug_info     0x00000000     0xccc5
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000     0x20f9 build/MX695/production/Trak32.o
  .debug_info    0x000020f9     0x1c51 build/MX695/production/trakhardware.o
@@ -1081,26 +1081,26 @@ END GROUP
  .debug_info    0x00009768      0x79b build/MX695/production/trakeep.o
  .debug_info    0x00009f03      0x333 build/MX695/production/trakaccel.o
  .debug_info    0x0000a236      0x77a build/MX695/production/trakADC.o
- .debug_info    0x0000a9b0      0x85b build/MX695/production/_ext/164137329/p32_i2c2.o
- .debug_info    0x0000b20b       0xd1 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(int_enable_mv_int_lib.o)
- .debug_info    0x0000b2dc      0x1ab c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(int_tbl_lib.o)
- .debug_info    0x0000b487      0x18a c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(uart_lib.o)
- .debug_info    0x0000b611       0xc9 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(int_enable_interrupts_lib.o)
- .debug_info    0x0000b6da       0xdf c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libpic32.a(default-bootstrap-exception-handler.o)
- .debug_info    0x0000b7b9       0xb9 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libpic32.a(default-on-reset.o)
- .debug_info    0x0000b872       0xc1 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libpic32.a(default-on-bootstrap.o)
- .debug_info    0x0000b933       0xaa c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libc.a(atoi.o)
- .debug_info    0x0000b9dd        0x0 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libc.a(ctype.o)
- .debug_info    0x0000b9dd       0xba c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libc.a(sprintf_cdnopuxX.eo)
- .debug_info    0x0000ba97       0xbb c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libc.a(doprnt_cdnopuxX.eo)
- .debug_info    0x0000bb52       0xac c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libc.a(_fputc_simple.o)
- .debug_info    0x0000bbfe        0x0 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libc.a(_iob.o)
- .debug_info    0x0000bbfe       0xaf c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libc.a(_flsbuf_simple.o)
- .debug_info    0x0000bcad       0xaa c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libpic32.a(write.o)
- .debug_info    0x0000bd57       0xb2 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libpic32.a(_mon_putc.o)
- .debug_info    0x0000be09        0x0 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libpic32.a(xc32_uart.o)
- .debug_info    0x0000be09      0x747 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1\libgcc.a(_udivdi3.o)
- .debug_info    0x0000c550      0x784 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1\libgcc.a(_umoddi3.o)
+ .debug_info    0x0000a9b0      0x84c build/MX695/production/p32_i2c2.o
+ .debug_info    0x0000b1fc       0xd1 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(int_enable_mv_int_lib.o)
+ .debug_info    0x0000b2cd      0x1ab c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(int_tbl_lib.o)
+ .debug_info    0x0000b478      0x18a c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(uart_lib.o)
+ .debug_info    0x0000b602       0xc9 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(int_enable_interrupts_lib.o)
+ .debug_info    0x0000b6cb       0xdf c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libpic32.a(default-bootstrap-exception-handler.o)
+ .debug_info    0x0000b7aa       0xb9 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libpic32.a(default-on-reset.o)
+ .debug_info    0x0000b863       0xc1 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libpic32.a(default-on-bootstrap.o)
+ .debug_info    0x0000b924       0xaa c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libc.a(atoi.o)
+ .debug_info    0x0000b9ce        0x0 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libc.a(ctype.o)
+ .debug_info    0x0000b9ce       0xba c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libc.a(sprintf_cdnopuxX.eo)
+ .debug_info    0x0000ba88       0xbb c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libc.a(doprnt_cdnopuxX.eo)
+ .debug_info    0x0000bb43       0xac c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libc.a(_fputc_simple.o)
+ .debug_info    0x0000bbef        0x0 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libc.a(_iob.o)
+ .debug_info    0x0000bbef       0xaf c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libc.a(_flsbuf_simple.o)
+ .debug_info    0x0000bc9e       0xaa c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libpic32.a(write.o)
+ .debug_info    0x0000bd48       0xb2 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libpic32.a(_mon_putc.o)
+ .debug_info    0x0000bdfa        0x0 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libpic32.a(xc32_uart.o)
+ .debug_info    0x0000bdfa      0x747 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1\libgcc.a(_udivdi3.o)
+ .debug_info    0x0000c541      0x784 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1\libgcc.a(_umoddi3.o)
 
 .debug_abbrev   0x00000000     0x1424
  *(.debug_abbrev)
@@ -1113,11 +1113,11 @@ END GROUP
  .debug_abbrev  0x00000a74      0x14b build/MX695/production/trakeep.o
  .debug_abbrev  0x00000bbf       0xa3 build/MX695/production/trakaccel.o
  .debug_abbrev  0x00000c62      0x16b build/MX695/production/trakADC.o
- .debug_abbrev  0x00000dcd      0x1a2 build/MX695/production/_ext/164137329/p32_i2c2.o
- .debug_abbrev  0x00000f6f       0x25 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(int_enable_mv_int_lib.o)
- .debug_abbrev  0x00000f94       0x25 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(int_tbl_lib.o)
- .debug_abbrev  0x00000fb9       0x38 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(uart_lib.o)
- .debug_abbrev  0x00000ff1       0x25 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(int_enable_interrupts_lib.o)
+ .debug_abbrev  0x00000dcd      0x1a2 build/MX695/production/p32_i2c2.o
+ .debug_abbrev  0x00000f6f       0x25 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(int_enable_mv_int_lib.o)
+ .debug_abbrev  0x00000f94       0x25 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(int_tbl_lib.o)
+ .debug_abbrev  0x00000fb9       0x38 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(uart_lib.o)
+ .debug_abbrev  0x00000ff1       0x25 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(int_enable_interrupts_lib.o)
  .debug_abbrev  0x00001016       0x25 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libpic32.a(default-bootstrap-exception-handler.o)
  .debug_abbrev  0x0000103b       0x25 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libpic32.a(default-on-reset.o)
  .debug_abbrev  0x00001060       0x25 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libpic32.a(default-on-bootstrap.o)
@@ -1134,7 +1134,7 @@ END GROUP
  .debug_abbrev  0x0000118b      0x13d c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1\libgcc.a(_udivdi3.o)
  .debug_abbrev  0x000012c8      0x15c c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1\libgcc.a(_umoddi3.o)
 
-.debug_line     0x00000000     0x1a37
+.debug_line     0x00000000     0x1a28
  *(.debug_line)
  .debug_line    0x00000000      0x22f build/MX695/production/Trak32.o
  .debug_line    0x0000022f      0x21c build/MX695/production/trakhardware.o
@@ -1145,26 +1145,26 @@ END GROUP
  .debug_line    0x00000be6      0x13a build/MX695/production/trakeep.o
  .debug_line    0x00000d20       0xbc build/MX695/production/trakaccel.o
  .debug_line    0x00000ddc      0x197 build/MX695/production/trakADC.o
- .debug_line    0x00000f73      0x20a build/MX695/production/_ext/164137329/p32_i2c2.o
- .debug_line    0x0000117d       0x6e c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(int_enable_mv_int_lib.o)
- .debug_line    0x000011eb       0x64 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(int_tbl_lib.o)
- .debug_line    0x0000124f       0x62 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(uart_lib.o)
- .debug_line    0x000012b1       0x72 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(int_enable_interrupts_lib.o)
- .debug_line    0x00001323       0x94 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libpic32.a(default-bootstrap-exception-handler.o)
- .debug_line    0x000013b7       0x81 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libpic32.a(default-on-reset.o)
- .debug_line    0x00001438       0x85 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libpic32.a(default-on-bootstrap.o)
- .debug_line    0x000014bd       0x77 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libc.a(atoi.o)
- .debug_line    0x00001534        0x0 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libc.a(ctype.o)
- .debug_line    0x00001534       0x7a c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libc.a(sprintf_cdnopuxX.eo)
- .debug_line    0x000015ae       0x79 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libc.a(doprnt_cdnopuxX.eo)
- .debug_line    0x00001627       0x78 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libc.a(_fputc_simple.o)
- .debug_line    0x0000169f        0x0 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libc.a(_iob.o)
- .debug_line    0x0000169f       0x79 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libc.a(_flsbuf_simple.o)
- .debug_line    0x00001718       0x76 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libpic32.a(write.o)
- .debug_line    0x0000178e       0x7a c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libpic32.a(_mon_putc.o)
- .debug_line    0x00001808        0x0 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libpic32.a(xc32_uart.o)
- .debug_line    0x00001808      0x116 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1\libgcc.a(_udivdi3.o)
- .debug_line    0x0000191e      0x119 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1\libgcc.a(_umoddi3.o)
+ .debug_line    0x00000f73      0x1fb build/MX695/production/p32_i2c2.o
+ .debug_line    0x0000116e       0x6e c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(int_enable_mv_int_lib.o)
+ .debug_line    0x000011dc       0x64 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(int_tbl_lib.o)
+ .debug_line    0x00001240       0x62 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(uart_lib.o)
+ .debug_line    0x000012a2       0x72 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(int_enable_interrupts_lib.o)
+ .debug_line    0x00001314       0x94 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libpic32.a(default-bootstrap-exception-handler.o)
+ .debug_line    0x000013a8       0x81 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libpic32.a(default-on-reset.o)
+ .debug_line    0x00001429       0x85 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libpic32.a(default-on-bootstrap.o)
+ .debug_line    0x000014ae       0x77 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libc.a(atoi.o)
+ .debug_line    0x00001525        0x0 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libc.a(ctype.o)
+ .debug_line    0x00001525       0x7a c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libc.a(sprintf_cdnopuxX.eo)
+ .debug_line    0x0000159f       0x79 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libc.a(doprnt_cdnopuxX.eo)
+ .debug_line    0x00001618       0x78 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libc.a(_fputc_simple.o)
+ .debug_line    0x00001690        0x0 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libc.a(_iob.o)
+ .debug_line    0x00001690       0x79 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libc.a(_flsbuf_simple.o)
+ .debug_line    0x00001709       0x76 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libpic32.a(write.o)
+ .debug_line    0x0000177f       0x7a c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libpic32.a(_mon_putc.o)
+ .debug_line    0x000017f9        0x0 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libpic32.a(xc32_uart.o)
+ .debug_line    0x000017f9      0x116 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1\libgcc.a(_udivdi3.o)
+ .debug_line    0x0000190f      0x119 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1\libgcc.a(_umoddi3.o)
 
 .debug_frame    0x00000000      0xbd4
  *(.debug_frame)
@@ -1177,11 +1177,11 @@ END GROUP
  .debug_frame   0x00000514       0x9c build/MX695/production/trakeep.o
  .debug_frame   0x000005b0       0x2c build/MX695/production/trakaccel.o
  .debug_frame   0x000005dc      0x1b4 build/MX695/production/trakADC.o
- .debug_frame   0x00000790      0x10c build/MX695/production/_ext/164137329/p32_i2c2.o
- .debug_frame   0x0000089c       0x28 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(int_enable_mv_int_lib.o)
- .debug_frame   0x000008c4       0xa0 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(int_tbl_lib.o)
- .debug_frame   0x00000964       0x90 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(uart_lib.o)
- .debug_frame   0x000009f4       0x20 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(int_enable_interrupts_lib.o)
+ .debug_frame   0x00000790      0x10c build/MX695/production/p32_i2c2.o
+ .debug_frame   0x0000089c       0x28 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(int_enable_mv_int_lib.o)
+ .debug_frame   0x000008c4       0xa0 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(int_tbl_lib.o)
+ .debug_frame   0x00000964       0x90 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(uart_lib.o)
+ .debug_frame   0x000009f4       0x20 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(int_enable_interrupts_lib.o)
  .debug_frame   0x00000a14       0x20 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libpic32.a(default-bootstrap-exception-handler.o)
  .debug_frame   0x00000a34       0x20 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libpic32.a(default-on-reset.o)
  .debug_frame   0x00000a54       0x20 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libpic32.a(default-on-bootstrap.o)
@@ -1206,11 +1206,11 @@ END GROUP
  .debug_str     0x000007b0       0x6d build/MX695/production/trakeep.o
  .debug_str     0x0000081d       0x15 build/MX695/production/trakaccel.o
  .debug_str     0x00000832       0x67 build/MX695/production/trakADC.o
- .debug_str     0x00000899       0x3f build/MX695/production/_ext/164137329/p32_i2c2.o
- .debug_str     0x000008d8        0x0 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(int_enable_mv_int_lib.o)
- .debug_str     0x000008d8        0x0 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(int_tbl_lib.o)
- .debug_str     0x000008d8        0x0 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(uart_lib.o)
- .debug_str     0x000008d8        0x0 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(int_enable_interrupts_lib.o)
+ .debug_str     0x00000899       0x3f build/MX695/production/p32_i2c2.o
+ .debug_str     0x000008d8        0x0 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(int_enable_mv_int_lib.o)
+ .debug_str     0x000008d8        0x0 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(int_tbl_lib.o)
+ .debug_str     0x000008d8        0x0 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(uart_lib.o)
+ .debug_str     0x000008d8        0x0 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(int_enable_interrupts_lib.o)
  .debug_str     0x000008d8        0x0 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libpic32.a(default-bootstrap-exception-handler.o)
  .debug_str     0x000008d8        0x0 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libpic32.a(default-on-reset.o)
  .debug_str     0x000008d8        0x0 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libpic32.a(default-on-bootstrap.o)
@@ -1269,7 +1269,7 @@ END GROUP
  .debug_pubtypes
                 0x00000722       0x50 build/MX695/production/trakADC.o
  .debug_pubtypes
-                0x00000772       0x63 build/MX695/production/_ext/164137329/p32_i2c2.o
+                0x00000772       0x63 build/MX695/production/p32_i2c2.o
  .debug_pubtypes
                 0x000007d5       0x59 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1\libgcc.a(_udivdi3.o)
  .debug_pubtypes
@@ -1277,10 +1277,10 @@ END GROUP
 
 .debug_ranges   0x00000000      0x2d8
  *(.debug_ranges)
- .debug_ranges  0x00000000       0x10 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(int_enable_mv_int_lib.o)
- .debug_ranges  0x00000010       0x50 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(int_tbl_lib.o)
- .debug_ranges  0x00000060       0x48 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(uart_lib.o)
- .debug_ranges  0x000000a8       0x10 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(int_enable_interrupts_lib.o)
+ .debug_ranges  0x00000000       0x10 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(int_enable_mv_int_lib.o)
+ .debug_ranges  0x00000010       0x50 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(int_tbl_lib.o)
+ .debug_ranges  0x00000060       0x48 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(uart_lib.o)
+ .debug_ranges  0x000000a8       0x10 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(int_enable_interrupts_lib.o)
  .debug_ranges  0x000000b8       0x10 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libpic32.a(default-bootstrap-exception-handler.o)
  .debug_ranges  0x000000c8       0x10 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libpic32.a(default-on-reset.o)
  .debug_ranges  0x000000d8       0x10 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libpic32.a(default-on-bootstrap.o)
@@ -1316,15 +1316,15 @@ END GROUP
  .gnu.attributes
                 0x00000080       0x10 build/MX695/production/trakADC.o
  .gnu.attributes
-                0x00000090       0x10 build/MX695/production/_ext/164137329/p32_i2c2.o
+                0x00000090       0x10 build/MX695/production/p32_i2c2.o
  .gnu.attributes
-                0x000000a0       0x10 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(int_enable_mv_int_lib.o)
+                0x000000a0       0x10 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(int_enable_mv_int_lib.o)
  .gnu.attributes
-                0x000000b0       0x10 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(int_tbl_lib.o)
+                0x000000b0       0x10 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(int_tbl_lib.o)
  .gnu.attributes
-                0x000000c0       0x10 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(uart_lib.o)
+                0x000000c0       0x10 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(uart_lib.o)
  .gnu.attributes
-                0x000000d0       0x10 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(int_enable_interrupts_lib.o)
+                0x000000d0       0x10 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(int_enable_interrupts_lib.o)
  .gnu.attributes
                 0x000000e0       0x10 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libpic32.a(default-bootstrap-exception-handler.o)
  .gnu.attributes
@@ -1502,40 +1502,40 @@ LOAD data_init
  .data          0x00000000        0x0 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libpic32.a(memcpy.o)
 
 .bss%z39        0x00000000        0x0
- .bss           0x00000000        0x0 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(int_enable_interrupts_lib.o)
+ .bss           0x00000000        0x0 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(int_enable_interrupts_lib.o)
 
 .data%z40       0x00000000        0x0
- .data          0x00000000        0x0 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(int_enable_interrupts_lib.o)
+ .data          0x00000000        0x0 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(int_enable_interrupts_lib.o)
 
 .bss%z41        0x00000000        0x0
- .bss           0x00000000        0x0 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(uart_lib.o)
+ .bss           0x00000000        0x0 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(uart_lib.o)
 
 .data%z42       0x00000000        0x0
- .data          0x00000000        0x0 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(uart_lib.o)
+ .data          0x00000000        0x0 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(uart_lib.o)
 
 .bss%z43        0x00000000        0x0
- .bss           0x00000000        0x0 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(int_tbl_lib.o)
+ .bss           0x00000000        0x0 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(int_tbl_lib.o)
 
 .data%z44       0x00000000        0x0
- .data          0x00000000        0x0 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(int_tbl_lib.o)
+ .data          0x00000000        0x0 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(int_tbl_lib.o)
 
 .bss%z45        0x00000000        0x0
- .bss           0x00000000        0x0 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(int_enable_mv_int_lib.o)
+ .bss           0x00000000        0x0 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(int_enable_mv_int_lib.o)
 
 .data%z46       0x00000000        0x0
- .data          0x00000000        0x0 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(int_enable_mv_int_lib.o)
+ .data          0x00000000        0x0 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(int_enable_mv_int_lib.o)
 
 .bss%z47        0x00000000        0x0
- .bss           0x00000000        0x0 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX675F512L\processor.o
+ .bss           0x00000000        0x0 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX695F512L\processor.o
 
 .data%z48       0x00000000        0x0
- .data          0x00000000        0x0 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX675F512L\processor.o
+ .data          0x00000000        0x0 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX695F512L\processor.o
 
 .bss%z49        0x00000000        0x0
- .bss           0x00000000        0x0 build/MX695/production/_ext/164137329/p32_i2c2.o
+ .bss           0x00000000        0x0 build/MX695/production/p32_i2c2.o
 
 .data%z50       0x00000000        0x0
- .data          0x00000000        0x0 build/MX695/production/_ext/164137329/p32_i2c2.o
+ .data          0x00000000        0x0 build/MX695/production/p32_i2c2.o
 
 .bss%z51        0x00000000        0x0
  .bss           0x00000000        0x0 build/MX695/production/trakADC.o
@@ -1649,7 +1649,7 @@ LOAD data_init
                 0x9d001c38                HandleBaroCommand
                 0x9d001c60                HandleMagnetometerCommand
                 0x9d001c88                HandleTemperatureCommand
- .text          0x9d001cb0      0x7e8 build/MX695/production/_ext/164137329/p32_i2c2.o
+ .text          0x9d001cb0      0x7e8 build/MX695/production/p32_i2c2.o
                 0x9d001cb0                drvI2C2Init
                 0x9d001fd4                drvI2C2ReadRegisters
                 0x9d00227c                drvI2C2WriteRegisters
@@ -1657,7 +1657,7 @@ LOAD data_init
                 0x9d00243c                drvI2C2ReadByte
 
 .rodata         0x9d002498      0x7d4
- .rodata        0x9d002498      0x7d4 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(int_tbl_lib.o)
+ .rodata        0x9d002498      0x7d4 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(int_tbl_lib.o)
                 0x9d002498                __IntSrcTbl
                 0x9d0029b4                __IntVectorTbl
 
@@ -1775,7 +1775,7 @@ LOAD data_init
 .text.UARTEnable
                 0x9d0064bc       0x80
  .text.UARTEnable
-                0x9d0064bc       0x80 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(uart_lib.o)
+                0x9d0064bc       0x80 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(uart_lib.o)
                 0x9d0064bc                UARTEnable
 
 .text._sprintf_cdnopuxX
@@ -1787,43 +1787,43 @@ LOAD data_init
 .text.UARTSetDataRate
                 0x9d0065a4       0x5c
  .text.UARTSetDataRate
-                0x9d0065a4       0x5c c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(uart_lib.o)
+                0x9d0065a4       0x5c c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(uart_lib.o)
                 0x9d0065a4                UARTSetDataRate
 
 .text.INTEnable
                 0x9d006600       0x58
  .text.INTEnable
-                0x9d006600       0x58 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(int_tbl_lib.o)
+                0x9d006600       0x58 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(int_tbl_lib.o)
                 0x9d006600                INTEnable
 
 .text.UARTGetDataRate
                 0x9d006658       0x40
  .text.UARTGetDataRate
-                0x9d006658       0x40 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(uart_lib.o)
+                0x9d006658       0x40 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(uart_lib.o)
                 0x9d006658                UARTGetDataRate
 
 .text.INTSetVectorPriority
                 0x9d006698       0x3c
  .text.INTSetVectorPriority
-                0x9d006698       0x3c c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(int_tbl_lib.o)
+                0x9d006698       0x3c c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(int_tbl_lib.o)
                 0x9d006698                INTSetVectorPriority
 
 .text.INTSetVectorSubPriority
                 0x9d0066d4       0x3c
  .text.INTSetVectorSubPriority
-                0x9d0066d4       0x3c c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(int_tbl_lib.o)
+                0x9d0066d4       0x3c c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(int_tbl_lib.o)
                 0x9d0066d4                INTSetVectorSubPriority
 
 .text.UARTConfigure
                 0x9d006710       0x3c
  .text.UARTConfigure
-                0x9d006710       0x3c c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(uart_lib.o)
+                0x9d006710       0x3c c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(uart_lib.o)
                 0x9d006710                UARTConfigure
 
 .text.UARTSetAddress
                 0x9d00674c       0x3c
  .text.UARTSetAddress
-                0x9d00674c       0x3c c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(uart_lib.o)
+                0x9d00674c       0x3c c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(uart_lib.o)
                 0x9d00674c                UARTSetAddress
 
 .text           0x9d006788       0x38
@@ -1833,65 +1833,65 @@ LOAD data_init
 .text.UARTWatchForAddress
                 0x9d0067c0       0x38
  .text.UARTWatchForAddress
-                0x9d0067c0       0x38 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(uart_lib.o)
+                0x9d0067c0       0x38 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(uart_lib.o)
                 0x9d0067c0                UARTWatchForAddress
 
 .text.INTEnableSystemMultiVectoredInt
                 0x9d0067f8       0x34
  .text.INTEnableSystemMultiVectoredInt
-                0x9d0067f8       0x34 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(int_enable_mv_int_lib.o)
+                0x9d0067f8       0x34 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(int_enable_mv_int_lib.o)
                 0x9d0067f8                INTEnableSystemMultiVectoredInt
 
 .text.INTGetVectorPriority
                 0x9d00682c       0x30
  .text.INTGetVectorPriority
-                0x9d00682c       0x30 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(int_tbl_lib.o)
+                0x9d00682c       0x30 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(int_tbl_lib.o)
                 0x9d00682c                INTGetVectorPriority
 
 .text.INTGetVectorSubPriority
                 0x9d00685c       0x30
  .text.INTGetVectorSubPriority
-                0x9d00685c       0x30 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(int_tbl_lib.o)
+                0x9d00685c       0x30 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(int_tbl_lib.o)
                 0x9d00685c                INTGetVectorSubPriority
 
 .text.INTClearFlag
                 0x9d00688c       0x2c
  .text.INTClearFlag
-                0x9d00688c       0x2c c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(int_tbl_lib.o)
+                0x9d00688c       0x2c c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(int_tbl_lib.o)
                 0x9d00688c                INTClearFlag
 
 .text.INTSetFlag
                 0x9d0068b8       0x2c
  .text.INTSetFlag
-                0x9d0068b8       0x2c c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(int_tbl_lib.o)
+                0x9d0068b8       0x2c c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(int_tbl_lib.o)
                 0x9d0068b8                INTSetFlag
 
 .text.INTGetFlag
                 0x9d0068e4       0x2c
  .text.INTGetFlag
-                0x9d0068e4       0x2c c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(int_tbl_lib.o)
+                0x9d0068e4       0x2c c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(int_tbl_lib.o)
                 0x9d0068e4                INTGetFlag
 
 .text.INTGetEnable
                 0x9d006910       0x2c
  .text.INTGetEnable
-                0x9d006910       0x2c c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(int_tbl_lib.o)
+                0x9d006910       0x2c c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(int_tbl_lib.o)
                 0x9d006910                INTGetEnable
 
 .text.UARTSetFifoMode
                 0x9d00693c       0x28
  .text.UARTSetFifoMode
-                0x9d00693c       0x28 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(uart_lib.o)
+                0x9d00693c       0x28 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(uart_lib.o)
                 0x9d00693c                UARTSetFifoMode
 
 .text.UARTSetLineControl
                 0x9d006964       0x28
  .text.UARTSetLineControl
-                0x9d006964       0x28 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(uart_lib.o)
+                0x9d006964       0x28 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(uart_lib.o)
                 0x9d006964                UARTSetLineControl
 
 .rodata         0x9d00698c       0x18
- .rodata        0x9d00698c       0x18 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(uart_lib.o)
+ .rodata        0x9d00698c       0x18 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(uart_lib.o)
                 0x9d00698c                uartReg
 
 .text           0x9d0069a4       0x18
@@ -1913,7 +1913,7 @@ LOAD data_init
 .text.INTEnableInterrupts
                 0x9d0069e4        0x8
  .text.INTEnableInterrupts
-                0x9d0069e4        0x8 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(int_enable_interrupts_lib.o)
+                0x9d0069e4        0x8 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(int_enable_interrupts_lib.o)
                 0x9d0069e4                INTEnableInterrupts
 
 .text._on_reset
@@ -1971,16 +1971,16 @@ LOAD data_init
  .text          0x00000000        0x0 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libpic32.a(default-bootstrap-exception-handler.o)
 
 .text%z85       0x00000000        0x0
- .text          0x00000000        0x0 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(int_enable_interrupts_lib.o)
+ .text          0x00000000        0x0 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(int_enable_interrupts_lib.o)
 
 .text%z86       0x00000000        0x0
- .text          0x00000000        0x0 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(uart_lib.o)
+ .text          0x00000000        0x0 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(uart_lib.o)
 
 .text%z87       0x00000000        0x0
- .text          0x00000000        0x0 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(int_tbl_lib.o)
+ .text          0x00000000        0x0 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(int_tbl_lib.o)
 
 .text%z88       0x00000000        0x0
- .text          0x00000000        0x0 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX675F512L.a(int_enable_mv_int_lib.o)
+ .text          0x00000000        0x0 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib\libmchp_peripheral_32MX695F512L.a(int_enable_mv_int_lib.o)
 
 .text%z89       0x00000000        0x0
- .text          0x00000000        0x0 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX675F512L\processor.o
+ .text          0x00000000        0x0 c:/program files/microchip/xc32/v1.10/bin/../lib/gcc/pic32mx/4.5.1/../../../../pic32mx/lib/./proc/32MX695F512L\processor.o
