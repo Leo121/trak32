@@ -5,13 +5,19 @@
 #include <p32xxxx.h>
 #include "common.h"
 #include "trakhardware.h"
-//#include <plib.h>
-//#include <stdio.h>
 #include "trakserial.h"
 #include "trakcommands.h"
 #include "trak-ints.h"
 
-//**Interrupt code**//)
+
+    
+uint16 MasterStateCtr;
+uint16 AnalogSampleCtr;
+
+
+
+
+//**Interrupt code**//
 
 void InitializeInterrupts(void)
 {    
@@ -68,8 +74,8 @@ void __ISR(_TIMER_3_VECTOR, IPL2SOFT) _T3Interrupt( void )
             LED_ONB2^=1;
             counts = 0;
         }
-//        if(AnalogSampleCtr > 0) AnalogSampleCtr--;
-//        if(MasterStateCtr > 0) MasterStateCtr--;        
+        if(AnalogSampleCtr > 0) AnalogSampleCtr--;
+        if(MasterStateCtr > 0) MasterStateCtr--;        
         SystemTicks++;
     }
 }
@@ -284,3 +290,101 @@ void __attribute__((naked, nomips16)) _general_exception_handler(uint32 cause, u
 }
 
 
+
+
+
+
+
+/*************************************************************************
+ Interrupts
+ *************************************************************************/
+
+///*************************************************************************
+// Timer 3 ISR
+//
+// Used to de-bounce buttons
+// *************************************************************************/
+//
+//void __ISR(_TIMER_3_VECTOR, ipl2) _T3Interrupt(void)
+//{
+////     BOOL NewState;
+////     LEDTimer++;
+//
+//     // Clear the interrupt flag
+//     mT3ClearIntFlag();
+//
+///*     // Debounce Mouse X Button
+//     NewState = mGetMouseX() ? FALSE : TRUE;
+//     if (NewState == MouseXPressed)
+//         MouseXTimer   = 0;
+//     else
+//         MouseXTimer++;
+//     if (MouseXTimer > BUTTON_DEBOUNCE_LIMIT)
+//     {
+//         MouseXPressed = NewState;
+//         AnyKeyPressed = TRUE;
+//     }
+//
+//     // Debounce Mouse Y Button
+//     NewState = mGetMouseY() ? FALSE : TRUE;
+//     if (NewState == MouseYPressed)
+//         MouseYTimer   = 0;
+//     else
+//         MouseYTimer++;
+//     if (MouseYTimer > BUTTON_DEBOUNCE_LIMIT)
+//     {
+//         MouseYPressed = NewState;
+//         AnyKeyPressed = TRUE;
+//     }
+//
+//     // Debounce Mouse Left Button
+//     NewState = mGetMouseLeftButton() ? FALSE : TRUE;
+//     if (NewState == MouseLeftPressed)
+//         MouseLeftTimer   = 0;
+//     else
+//         MouseLeftTimer++;
+//     if (MouseLeftTimer > BUTTON_DEBOUNCE_LIMIT)
+//     {
+//         MouseLeftPressed = NewState;
+//         AnyKeyPressed    = TRUE;
+//     }*/
+//}
+//
+
+///*************************************************************************
+// Change Notice ISR
+//
+// Used for remote wake up
+// *************************************************************************/
+//void __ISR(_CHANGE_NOTICE_VECTOR, ipl3) ChangeNotice_Handler(void)
+//{
+///*    unsigned int temp;
+//
+//    // clear the mismatch condition
+//    temp = mPORTDRead();
+//
+//    // clear the interrupt flag
+//    mCNClearIntFlag();
+//
+//    // Clear the suspended state
+//    if ( Suspended && RemoteWakeEnabled )
+//    {
+//        Suspended = FALSE;
+//        HIDSignalResume();
+//
+//    }*/
+//}
+//
+///*************************************************************************
+// USB ISR
+//
+// Necessary to wake up device when sleeping
+// *************************************************************************/
+//#ifdef SLEEP_WHEN_SUSPENDED
+//    void __ISR(_USB1_VECTOR, ipl6) _USB1Interrupt(void)		//was 14, redundant with MiWi RX int
+//    {
+//        U1OTGIRbits.ACTVIF = 1;
+//        U1OTGIEbits.ACTVIE = 0;
+//        IFS1CLR = 0x02000000; // USBIF
+//    }
+//#endif

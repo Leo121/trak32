@@ -12,6 +12,15 @@
 extern "C" {
 #endif
 
+#define MASTER_COUNT_TICKS  50
+#define ANALOG_SAMPLE_TICKS 75    
+    
+    
+extern uint16 MasterStateCtr;
+extern uint16 AnalogSampleCtr;
+
+
+
 extern void InitializeInterrupts(void);   
 
 #ifdef	__cplusplus

@@ -43,7 +43,7 @@ void InitializeHardware(void)
     InitializeUART2();          //UART2 -- debug
     InitializeUART1();          //UART1 -- Pi
 
-//    InitializeADC();
+    InitializeADC();
 //    InitializeLEDPWMs();
 //    InitializeSoundPWM();
     

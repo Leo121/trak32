@@ -36,6 +36,8 @@ typedef enum{
     RETURN_SUCCESS
 }RETURN_T;
 
+#define BAD_STATE 0xFF      //numerous hardware types may return a bad state, this will be 0xFF
+
 
 //#define TRUE 1
 //#define FALSE 0

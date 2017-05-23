@@ -73,7 +73,21 @@ void InterpretCommands(unsigned char *CommandString)
 //	    	//CommandHandlerStatus = HandleStatusCommand(CommandString);
 //    		break;
 
+        case CMD_ADC:
+            CommandHandlerStatus  = 1;
+            HandleADCCommand(CommandString, TX2buffer);
+            break;
 
+        case CMD_ADC_VOLTAGE:
+            CommandHandlerStatus  = 1;
+            HandleADCvCommand(CommandString, TX2buffer);
+            break;
+            
+        case CMD_TEMPERATURE:
+            CommandHandlerStatus  = 1;
+            HandleTemperatureCommand(CommandString, TX2buffer);
+            break;
+            
         case CMD_LED:
             CommandHandlerStatus  = 1;
             HandleLEDCommand(CommandString, TX2buffer);
@@ -92,6 +106,8 @@ void InterpretCommands(unsigned char *CommandString)
                 TempHours = TempMinutes/60;
                 TempMinutes = TempMinutes - (TempHours * 60);
                 TempDays = TempHours/24;
+                TempHours = TempHours - (TempDays * 24);
+                
                 
                 //sprintf(TX2buffer, "Up time: %lu.%03i seconds\r\n", TempSecs, TempFracSecs);            
                 sprintf(TX2buffer, "Up time: %i days, %i hours, %i minutes %i.%03i seconds\r\n", TempDays, TempHours, TempMinutes, TempSecs, TempFracSecs);            
@@ -282,10 +298,137 @@ COM_ERRORS HandleLEDCommand(uint8 *CommandString, uint8 *TXbuffer)
 }
 
 
+//#define aONB_TEMP_CH            2
+//#define aRMOTOR_TEMP_CH         4    
+//#define aLMOTOR_TEMP_CH         3    
+//#define aLIGHT_SENSE_CH         5    
+//#define aBAT1_CH                10    
+//#define aBAT2_CH                11    
+//#define aSPARE1_CH              6    
+//#define aSPARE2_CH              7    
+//#define aSPARE3_CH              8    
+//#define aSPARE4_CH              9    
+
 COM_ERRORS HandleADCCommand(uint8 *CommandString, uint8 *TXbuffer)
 {
+    unsigned char Select = CommandString[1];
+    TRAK_COMMAND_ACTIONS Action = CommandString[2];
+    //unsigned char CommandStringLength;
+    //int CommandValue = 0;
+    //unsigned char CommandValueString[7];
+    uint8 adcChannel;
+    uint16 adcValue;
     
+    
+    //unsigned char i, j, statechar;
+    unsigned char returnvalue = 0;
+
+    adcChannel = adcSelectToChannel(Select);
+  
+    if(adcChannel == BAD_STATE) returnvalue = BAD_STATE;
+    
+    if(returnvalue != BAD_STATE)
+    {
+        switch(Action)
+        {
+            case CMD_ACTION_OFF:
+            case CMD_ACTION_ON:
+            case CMD_ACTION_TOGGLE:
+                break;
+
+            case CMD_ACTION_READ:
+                adcValue = readADCbyChannel(adcChannel);
+                sprintf(TXbuffer, "A%c:%i\r\n", Select, adcValue);
+                break;
+            default:
+                ComError = COM_ERROR_BAD_STATE;
+                returnvalue = BAD_STATE;
+        }
+    }    
+    return returnvalue;    
 }
+
+COM_ERRORS HandleADCvCommand(uint8 *CommandString, uint8 *TXbuffer)
+{
+    unsigned char Select = CommandString[1];
+    TRAK_COMMAND_ACTIONS Action = CommandString[2];
+    uint8 adcChannel;
+    float adcResult, hold;
+    int16 whole, fraction;
+    
+    //unsigned char i, j, statechar;
+    unsigned char returnvalue = 0;
+
+    adcChannel = adcSelectToChannel(Select);
+  
+    if(adcChannel == BAD_STATE) returnvalue = BAD_STATE;        
+    
+    if(returnvalue != BAD_STATE)
+    {
+        switch(Action)
+        {
+            case CMD_ACTION_OFF:
+            case CMD_ACTION_ON:
+            case CMD_ACTION_TOGGLE:
+                break;
+
+            case CMD_ACTION_READ:
+                readADCvoltageChannel(adcChannel, &adcResult);
+                adcResult = adcResult + 0.0005;     //round up
+                whole = (int)adcResult;
+                hold = adcResult - (float)whole;
+                fraction = (uint16)(hold * 1000);
+                sprintf(TXbuffer, "A%cv:%i.%03i\r\n", Select, whole, fraction);
+                break;
+            default:
+                ComError = COM_ERROR_BAD_STATE;
+                returnvalue = BAD_STATE;
+        }
+    }    
+    return returnvalue;    
+}
+
+uint8 adcSelectToChannel(uint8 selectChar)
+{
+    uint8 adcChannel;
+    switch(selectChar)
+    {
+        case '1':
+            adcChannel = 2;
+            break;
+        case '2':
+            adcChannel = 3;
+            break;
+        case '3':
+            adcChannel = 4;
+            break;
+        case '4':
+            adcChannel = 5;
+            break;
+        case '5':
+            adcChannel = 10;
+            break;
+        case '6':
+            adcChannel = 11;
+            break;
+        case '7':
+            adcChannel = 6;
+            break;
+        case '8':
+            adcChannel = 7;
+            break;
+        case '9':
+            adcChannel = 8;
+            break;
+        case 'A':
+            adcChannel = 9;
+            break;            
+        default:
+            adcChannel = BAD_STATE;
+    }
+    return adcChannel;
+}
+
 
 COM_ERRORS HandleMotorCommand(uint8 *CommandString, uint8 *TXbuffer)
 {
@@ -324,6 +467,42 @@ COM_ERRORS HandleMagnetometerCommand(uint8 *CommandString, uint8 *TXbuffer)
 
 COM_ERRORS HandleTemperatureCommand(uint8 *CommandString, uint8 *TXbuffer)
 {
+    unsigned char Select = CommandString[1];
+    TRAK_COMMAND_ACTIONS Action = CommandString[2];
+    uint8 adcChannel;
+    float adcResult, hold;
+    int16 whole, fraction;
     
+    //unsigned char i, j, statechar;
+    unsigned char returnvalue = 0;
+
+    adcChannel = adcSelectToChannel(Select);
+  
+    if(adcChannel == BAD_STATE) returnvalue = BAD_STATE;        
+    
+    if(returnvalue != BAD_STATE)
+    {
+        switch(Action)
+        {
+            case CMD_ACTION_OFF:
+            case CMD_ACTION_ON:
+            case CMD_ACTION_TOGGLE:
+                break;
+
+            case CMD_ACTION_READ:
+                readADCvoltageChannel(adcChannel, &adcResult);
+                voltageToTemp(adcResult, &adcResult);
+                adcResult = adcResult + 0.0005;     //round up
+                whole = (int)adcResult;
+                hold = adcResult - (float)whole;
+                fraction = (int)(hold * 1000);
+                sprintf(TXbuffer, "A%ct:%i.%03i\r\n", Select, whole, fraction);
+                break;
+            default:
+                ComError = COM_ERROR_BAD_STATE;
+                returnvalue = BAD_STATE;
+        }
+    }    
+    return returnvalue;        
 }
 

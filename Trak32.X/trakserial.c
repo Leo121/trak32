@@ -112,6 +112,11 @@ void InitializeUART2(void)
  // Interrupt enabling for RX and TX section
     IEC1bits.U2RXIE = 1;        //INTEnable(INT_U2RX, INT_ENABLED);  // RX Interrupt is enabled
     IEC1bits.U2TXIE = 0;        //INTEnable(INT_U2TX, INT_DISABLED);    
+    
+    U2STAbits.UTXEN = 1;
+    U2STAbits.URXEN = 1;
+    U2MODEbits.ON = 1;
+    
 }
 
 

@@ -21,10 +21,11 @@ typedef enum{
     CMD_INPUT = 'I',
     CMD_OUTPUT = 'O',
     CMD_PWM = 'P',
-    CMD_ADC_VOLTAGE = 'V',
+    CMD_ADC_VOLTAGE = 'E',
     CMD_ACCEL = 'C',
     CMD_BARO = 'B',
     CMD_MAGNETOMETER = 'G',
+    CMD_GYRO = 'Y',
     CMD_MOTOR = 'M',
     CMD_DIGITS = 'D',
     CMD_TEMPERATURE = 'T',
@@ -62,8 +63,6 @@ typedef enum{
 	DEV_MODE_4 = '4'
 }DEV_OPERATION_MODES;
 
-#define BAD_STATE 0xFF      //numerous hardware types may return a bad state, this will be 0xFF
-
 typedef enum{
 	FLAG_OFF,
 	FLAG_ON
@@ -80,6 +79,8 @@ extern void ParseU2Command(void);
 
 extern COM_ERRORS HandleLEDCommand(uint8 *CommandString, uint8 *TXbuffer);
 extern COM_ERRORS HandleADCCommand(uint8 *CommandString, uint8 *TXbuffer);
+extern COM_ERRORS HandleADCvCommand(uint8 *CommandString, uint8 *TXbuffer);
+extern uint8 adcSelectToChannel(uint8 selectChar);
 extern COM_ERRORS HandleMotorCommand(uint8 *CommandString, uint8 *TXbuffer);
 extern COM_ERRORS HandleInputCommand(uint8 *CommandString, uint8 *TXbuffer);
 extern COM_ERRORS HandleOutputCommand(uint8 *CommandString, uint8 *TXbuffer);

@@ -20,23 +20,44 @@ uint16 readADCbyChannel(uint8 channel)
     return MeasureAnalogInputs();
 }
 
-void readBoardTemp(void)
+void readADCvoltageChannel(uint8 channel, float* result)
+{
+    uint8 gain;
+    float voltage;
+    gain = gainFromADCchannel(channel);
+    voltage = (float) readADCbyChannel(channel);
+    voltage = (voltage/(float)ADC_MAX_COUNTS) * (float)ADC_VREF;
+    voltage = voltage / gain;
+    
+    //return voltage;
+    *result = voltage;
+}
+
+void readBoardTemp(float* result)
 {
     SelectAnalogChannel(aONB_TEMP_CH);
     boardTemperature = MeasureAnalogInputs();        
 }
 
-void readRHmotorTemp(void)
+void readRHmotorTemp(float* result)
 {    
     SelectAnalogChannel(aRMOTOR_TEMP_CH);
     rhMotorTemperature = MeasureAnalogInputs();        
 }
 
-void readLHmotorTemp(void)
+void readLHmotorTemp(float* result)
 {
     SelectAnalogChannel(aLMOTOR_TEMP_CH);
     lhMotorTemperature = MeasureAnalogInputs();        
 }
+
+void voltageToTemp(float voltage, float* result)
+{
+    float tempInC = voltage - TEMP_V_OFFSET;
+    tempInC = tempInC/TEMP_V_PER_DEGC;
+    *result = tempInC;    
+}
+
 
 void readLightSensor(void)
 {
@@ -97,8 +118,8 @@ void InitializeADC(void)
 
     //initialization steps taken from PIC32Mxx datasheet, p503
 //#define aONB_TEMP_CH            2
-//#define aRMOTOR_TEMP_CH         4    
 //#define aLMOTOR_TEMP_CH         3    
+//#define aRMOTOR_TEMP_CH         4    
 //#define aLIGHT_SENSE_CH         5    
 //#define aBAT1_CH                10    
 //#define aBAT2_CH                11    
@@ -118,7 +139,7 @@ void InitializeADC(void)
 	// configure and enable the ADC
     AD1CON1bits.ADON = 0;       //ADC should be off before changing settings
     AD1CON1 = 0x00E4;
-    AD1CON2 = 0x00;
+    AD1CON2 = 0x20;
     SelectAnalogChannel(0);
 //	OpenADC10( PARAM1, PARAM2, PARAM3, PARAM4, PARAM5 ); // configure ADC using parameter define above
 //
@@ -157,4 +178,48 @@ void SampleDelay(void)
 	{
             Nop();
 	}
+}
+
+
+uint8 gainFromADCchannel(uint8 adcChannel)
+{
+    uint8 gain;
+    
+    switch(adcChannel)
+    {
+        case 2:
+            gain = ADC_CH2_GAIN;
+            break;
+        case 3:
+            gain = ADC_CH3_GAIN;
+            break;
+        case 4:
+            gain = ADC_CH4_GAIN;
+            break;
+        case 5:
+            gain = ADC_CH5_GAIN;
+            break;
+        case 6:
+            gain = ADC_CH6_GAIN;
+            break;
+        case 7:
+            gain = ADC_CH7_GAIN;
+            break;
+        case 8:
+            gain = ADC_CH8_GAIN;
+            break;
+        case 9:
+            gain = ADC_CH9_GAIN;
+            break;
+        case 10:
+            gain = ADC_CH10_GAIN;
+            break;
+        case 11:
+            gain = ADC_CH11_GAIN;
+            break;
+        default:
+            gain = BAD_STATE;
+            break;
+    }
+    return gain;
 }
