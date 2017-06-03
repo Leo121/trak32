@@ -139,7 +139,11 @@ void InitializeADC(void)
 	// configure and enable the ADC
     AD1CON1bits.ADON = 0;       //ADC should be off before changing settings
     AD1CON1 = 0x00E4;
-    AD1CON2 = 0x20;
+#ifdef USE_EXT_VREF
+    AD1CON2 = 0x2000;
+#else
+    AD1CON2 = 0x0000;
+#endif
     SelectAnalogChannel(0);
 //	OpenADC10( PARAM1, PARAM2, PARAM3, PARAM4, PARAM5 ); // configure ADC using parameter define above
 //

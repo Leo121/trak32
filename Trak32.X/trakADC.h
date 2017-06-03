@@ -12,7 +12,14 @@
 extern "C" {
 #endif
 
+//#define USE_EXT_VREF    
+    
+#ifdef USE_EXT_VREF    
+#define ADC_VREF        3.0
+#else
 #define ADC_VREF        3.3
+#endif
+    
 #define ADC_MAX_COUNTS  1023
 
 #define TEMP_V_OFFSET   0.500

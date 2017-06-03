@@ -5,4 +5,5 @@ common.h  \
 trakcommands.h  \
 trakhardware.h  \
 trak32.h  \
-trakLEDs.h 
+trakLEDs.h  \
+ trakbarometer.h 

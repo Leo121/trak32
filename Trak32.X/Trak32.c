@@ -109,6 +109,7 @@ void checkComChannels(void)
 void checkSampleTimers(void)
 {
     AnalogSampleCtr = ANALOG_SAMPLE_TICKS;
+    getBarometerReading();
     //sample all ADCs and save
 }
 

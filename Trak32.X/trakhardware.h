@@ -20,6 +20,16 @@ typedef enum
     LED_ON
 }LED_STATE_T;
 
+typedef enum{
+    PERIPHERAL_NOT_PRESENT,
+    PERIPHERAL_ERROR,
+    PERIPHERAL_OK
+}PERIPHERAL_STATUS_T;
+
+#define BAROMETER_INSTALLED
+    
+    
+
 
     
 ///////////////////////////////////////////////////////////////
@@ -245,6 +255,7 @@ typedef enum
 //Hardware related globals    
 extern uint16 DelayTicks;    
 extern uint32 SystemTicks;
+extern PERIPHERAL_STATUS_T barometerStatus;    
     
 //Hardware function prototypes
 extern void InitializeHardware(void);

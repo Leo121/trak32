@@ -10,7 +10,7 @@
 #include "trakhardware.h"
 #include "trak32.h"
 #include "trakLEDs.h"
-
+#include "trakbarometer.h"
 
 uint8 RXcmdbuffer[255];
 uint8 RX2readptr = 0;
@@ -88,6 +88,11 @@ void InterpretCommands(unsigned char *CommandString)
             HandleTemperatureCommand(CommandString, TX2buffer);
             break;
             
+        case CMD_BARO:
+            CommandHandlerStatus  = 1;
+            HandleBaroCommand(CommandString, TX2buffer);
+            break;
+            
         case CMD_LED:
             CommandHandlerStatus  = 1;
             HandleLEDCommand(CommandString, TX2buffer);
@@ -108,9 +113,8 @@ void InterpretCommands(unsigned char *CommandString)
                 TempDays = TempHours/24;
                 TempHours = TempHours - (TempDays * 24);
                 
-                
-                //sprintf(TX2buffer, "Up time: %lu.%03i seconds\r\n", TempSecs, TempFracSecs);            
-                sprintf(TX2buffer, "Up time: %i days, %i hours, %i minutes %i.%03i seconds\r\n", TempDays, TempHours, TempMinutes, TempSecs, TempFracSecs);            
+                sprintf(TX2buffer, "Up time: %i:%02i:%02i:%02i.%03i\r\n", TempDays, TempHours, TempMinutes, TempSecs, TempFracSecs);                                
+                //sprintf(TX2buffer, "Up time: %i days, %i hours, %i minutes %i.%03i seconds\r\n", TempDays, TempHours, TempMinutes, TempSecs, TempFracSecs);            
             }
             else
             {
@@ -457,7 +461,23 @@ COM_ERRORS HandleAccelCommand(uint8 *CommandString, uint8 *TXbuffer)
 
 COM_ERRORS HandleBaroCommand(uint8 *CommandString, uint8 *TXbuffer)
 {
-    
+    COM_ERRORS returnvalue = 0;
+    if(barometerStatus == PERIPHERAL_NOT_PRESENT)
+    {
+       sprintf(TXbuffer, "Baro Not Present\r\n"); 
+    }
+    else
+    {
+        if(barometerStatus == PERIPHERAL_ERROR)
+        {
+           sprintf(TXbuffer, "Baro Error\r\n");             
+        }
+        else
+        {
+            sprintf(TXbuffer, "BP:%3.2f\r\n", currentBarometricPressure);
+        }
+    }
+    return returnvalue;
 }
 
 COM_ERRORS HandleMagnetometerCommand(uint8 *CommandString, uint8 *TXbuffer)

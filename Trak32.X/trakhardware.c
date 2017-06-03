@@ -15,6 +15,9 @@
 uint16 DelayTicks;
 uint32 SystemTicks = 0;
 
+PERIPHERAL_STATUS_T barometerStatus;
+
+
 void InitializeHardware(void)
 {
     DDPCONbits.JTAGEN = 0;
@@ -46,6 +49,14 @@ void InitializeHardware(void)
     InitializeADC();
 //    InitializeLEDPWMs();
 //    InitializeSoundPWM();
+    
+#ifdef BAROMETER_INSTALLED
+    initBarometerSPI();
+    barometerStatus = checkBarometer();       
+#else
+    barometerStatus = PERIPHERAL_NOT_PRESENT;
+#endif
+    
     
  
 }

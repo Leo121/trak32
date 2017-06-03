@@ -26,13 +26,34 @@ float currentAirTemperature;        //datasheet does not specify temp ADC to deg
 
 void initBarometerSPI(void)
 {
-    SPI2BRG = 0x01;     //24MHz Fpb = 6MHz SPI clock, barometer max clk = 8MHz
+//spi port
+    SPI_CLK_TRIS = 0;
+    SPI_MOSI_TRIS = 0;
+    SPI_MISO_TRIS = 1;
+//spi barometric sensor select
+    SPI_BARO_CS_TRIS = 0;
+        
+    SPI2BRG = 0x03;     //24MHz Fpb = 6MHz SPI clock, barometer max clk = 8MHz
         
     SPI2CONbits.SMP = 1;
     SPI2CONbits.CKE = 1;
     SPI2CONbits.CKP = 1;
     SPI2CONbits.MSTEN = 1;
     SPI2CONbits.ON = 1;     //enable SPI module
+}
+
+PERIPHERAL_STATUS_T checkBarometer(void)
+{
+    readBarometerCoefficents();
+    if(barometerCoefficents.a0 == 0xFFFF)
+    {
+       barometerStatus = PERIPHERAL_ERROR; 
+    }
+    else
+    {
+       barometerStatus = PERIPHERAL_OK; 
+    }
+    return barometerStatus;
 }
 
 
