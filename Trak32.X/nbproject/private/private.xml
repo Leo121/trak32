@@ -3,12 +3,16 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/E:/Users/KMW/TechProjects/Phantron/trak32/Trak32.X/p32_i2c2.h</file>
-            <file>file:/E:/Users/KMW/TechProjects/Phantron/trak32/Trak32.X/p32_i2c2.c</file>
             <file>file:/E:/Users/KMW/TechProjects/Phantron/trak32/Trak32.X/Trak32.c</file>
-            <file>file:/E:/Users/KMW/TechProjects/Phantron/trak32/Trak32.X/trakhardware.c</file>
-            <file>file:/E:/Users/KMW/TechProjects/Phantron/trak32/Trak32.X/trakserial.c</file>
+            <file>file:/E:/Users/KMW/TechProjects/Phantron/trak32/Trak32.X/trakeep.c</file>
+            <file>file:/E:/Users/KMW/TechProjects/Phantron/trak32/Trak32.X/trakhardware.h</file>
             <file>file:/E:/Users/KMW/TechProjects/Phantron/trak32/Trak32.X/trakcommands.c</file>
+            <file>file:/E:/Users/KMW/TechProjects/Phantron/trak32/Trak32.X/trakaccel.c</file>
+            <file>file:/E:/Users/KMW/TechProjects/Phantron/trak32/Trak32.X/trakbarometer.c</file>
+            <file>file:/E:/Users/KMW/TechProjects/Phantron/trak32/Trak32.X/trakcommands.h</file>
+            <file>file:/E:/Users/KMW/TechProjects/Phantron/trak32/Trak32.X/trakserial.c</file>
+            <file>file:/E:/Users/KMW/TechProjects/Phantron/trak32/Trak32.X/trakhardware.c</file>
+            <file>file:/E:/Users/KMW/TechProjects/Phantron/trak32/Trak32.X/trakeep.h</file>
         </group>
     </open-files>
 </project-private>

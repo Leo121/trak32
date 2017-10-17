@@ -27,10 +27,8 @@ typedef enum{
 }PERIPHERAL_STATUS_T;
 
 #define BAROMETER_INSTALLED
+#define ACCELEROMETER_INSTALLED    
     
-    
-
-
     
 ///////////////////////////////////////////////////////////////
 //onboard LED1
@@ -209,7 +207,7 @@ typedef enum{
 #define SPI_SPARE1_CS_TRIS      TRISCbits.TRISC1
 //spi spare2 select
 #define SPI_SPARE2_CS           LATEbits.LATE7
-#define SPI_SPARE3_CS_TRIS      TRISEbits.TRISE7
+#define SPI_SPARE2_CS_TRIS      TRISEbits.TRISE7
 //can tx/rx, can standby
 #define CAN_TX                  LATFbits.LATF1
 #define CAN_TX_TRIS             TRISFbits.TRISF1

@@ -4,10 +4,12 @@
 
 
 union{
-    uint16 a0;
-    uint16 b1;
-    uint16 b2;
-    uint16 c12; 
+    struct{
+        uint16 a0;
+        uint16 b1;
+        uint16 b2;
+        uint16 c12; 
+    }coefficients;
     uint8 buffer[8];
 }barometerCoefficents;
 
@@ -18,7 +20,8 @@ union{
 }barometerResults;
 
 
-uint8 readCoefCommands[8] = {0x88, 0x8A, 0x8C, 0x8E, 0x90, 0x92, 0x94, 0x96};
+//uint8 readCoefCommands[9] = {0x88, 0x8A, 0x8C, 0x8E, 0x90, 0x92, 0x94, 0x96, 0x00};     //note: final null byte to read last coefficient
+uint8 readCoefCommands[8] = {0x88, 0x8A, 0x8C, 0x8E, 0x90, 0x92, 0x94, 0x96};     //note: final null byte to read last coefficient
 uint8 readBaroADCcommands[4] = {BARO_CMD_READ_PRES_H, BARO_CMD_READ_PRES_L, BARO_CMD_READ_TEMP_H, BARO_CMD_READ_TEMP_L};
 
 float currentBarometricPressure;
@@ -32,12 +35,14 @@ void initBarometerSPI(void)
     SPI_MISO_TRIS = 1;
 //spi barometric sensor select
     SPI_BARO_CS_TRIS = 0;
+
+    SPI2CONbits.ON = 0;     //disable SPI module
         
     SPI2BRG = 0x03;     //24MHz Fpb = 6MHz SPI clock, barometer max clk = 8MHz
         
-    SPI2CONbits.SMP = 1;
+    SPI2CONbits.SMP = 0;
     SPI2CONbits.CKE = 1;
-    SPI2CONbits.CKP = 1;
+    SPI2CONbits.CKP = 0;
     SPI2CONbits.MSTEN = 1;
     SPI2CONbits.ON = 1;     //enable SPI module
 }
@@ -45,7 +50,7 @@ void initBarometerSPI(void)
 PERIPHERAL_STATUS_T checkBarometer(void)
 {
     readBarometerCoefficents();
-    if(barometerCoefficents.a0 == 0xFFFF)
+    if(barometerCoefficents.coefficients.a0 == 0xFFFF)
     {
        barometerStatus = PERIPHERAL_ERROR; 
     }
@@ -84,7 +89,7 @@ void readBarometer(void)
     {
         barometerResults.buffer[index] = simpleCommandReadSPI(readBaroADCcommands[index]);
     }    
-    SPI_BARO_CS = 0;
+    SPI_BARO_CS = 1;
     
 }
 
@@ -93,10 +98,10 @@ void calculateBarometerPressureTemp(void)
     float a0, b1, b2, c12;
     //convert coefficients to floats
     //
-    a0 = convertBaroFPvalueToFloat(barometerCoefficents.a0, BARO_COEF_A0_INT, BARO_COEF_A0_FRAC, BARO_COEF_A0_ZEROPAD);
-    b1 = convertBaroFPvalueToFloat(barometerCoefficents.b1, BARO_COEF_B1_INT, BARO_COEF_B1_FRAC, BARO_COEF_B1_ZEROPAD);
-    b2 = convertBaroFPvalueToFloat(barometerCoefficents.b2, BARO_COEF_B2_INT, BARO_COEF_B2_FRAC, BARO_COEF_B2_ZEROPAD);
-    c12 = convertBaroFPvalueToFloat(barometerCoefficents.c12, BARO_COEF_C12_INT, BARO_COEF_C12_FRAC, BARO_COEF_C12_ZEROPAD);
+    a0 = convertBaroFPvalueToFloat(barometerCoefficents.coefficients.a0, BARO_COEF_A0_INT, BARO_COEF_A0_FRAC, BARO_COEF_A0_ZEROPAD);
+    b1 = convertBaroFPvalueToFloat(barometerCoefficents.coefficients.b1, BARO_COEF_B1_INT, BARO_COEF_B1_FRAC, BARO_COEF_B1_ZEROPAD);
+    b2 = convertBaroFPvalueToFloat(barometerCoefficents.coefficients.b2, BARO_COEF_B2_INT, BARO_COEF_B2_FRAC, BARO_COEF_B2_ZEROPAD);
+    c12 = convertBaroFPvalueToFloat(barometerCoefficents.coefficients.c12, BARO_COEF_C12_INT, BARO_COEF_C12_FRAC, BARO_COEF_C12_ZEROPAD);
     currentBarometricPressure = a0 + (b1 + c12 * barometerResults.temperatureADC) * barometerResults.pressureADC + b2 * barometerResults.temperatureADC;
     
     currentBarometricPressure = currentBarometricPressure * (115-50/1023) + 50;

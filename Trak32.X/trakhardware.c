@@ -50,6 +50,14 @@ void InitializeHardware(void)
 //    InitializeLEDPWMs();
 //    InitializeSoundPWM();
     
+    SPI_CLK_TRIS = 0;
+    SPI_MOSI_TRIS = 0;
+    SPI_MISO_TRIS = 1;
+    SPI_BARO_CS = 1;
+    SPI_BARO_CS_TRIS = 0;
+    SPI_SPARE1_CS_TRIS = 0;            
+    SPI_SPARE2_CS_TRIS = 0;            
+    
 #ifdef BAROMETER_INSTALLED
     initBarometerSPI();
     barometerStatus = checkBarometer();       
@@ -57,6 +65,13 @@ void InitializeHardware(void)
     barometerStatus = PERIPHERAL_NOT_PRESENT;
 #endif
     
+#ifdef ACCELEROMETER_INSTALLED
+    SPI_ACCEL_CS = 1;
+    SPI_MAG_CS = 1;
+    SPI_ACCEL_CS_TRIS = 0;
+    SPI_MAG_CS_TRIS = 0;
+#endif
+
     
  
 }
@@ -121,10 +136,14 @@ uint16 ADCRead(void)
 
 uint8 simpleCommandReadSPI(uint8 command)
 {
+    uint8 delay;
     SPI2BUF = command;
     while(!SPI2STATbits.SPIBUSY);
+    //for(delay = 0; delay < 100; delay++);
     SPI2BUF = 0x00;
     while(!SPI2STATbits.SPIBUSY);
+    //while(!SPI2STATbits.SPIRBF);
+    //for(delay = 0; delay < 100; delay++);
     return SPI2BUF;
 }
 

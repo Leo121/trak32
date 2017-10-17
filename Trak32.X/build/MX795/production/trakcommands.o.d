@@ -6,4 +6,5 @@ trakcommands.h  \
 trakhardware.h  \
 trak32.h  \
 trakLEDs.h  \
- trakbarometer.h 
+ trakbarometer.h  \
+trakeep.h 

@@ -11,6 +11,8 @@
 #include "trak32.h"
 #include "trakLEDs.h"
 #include "trakbarometer.h"
+#include "trakeep.h"
+
 
 uint8 RXcmdbuffer[255];
 uint8 RX2readptr = 0;
@@ -127,6 +129,10 @@ void InterpretCommands(unsigned char *CommandString)
             sprintf(TX2buffer, "HW version %d.%d   FW Version %d.%d\r\n", HW_VERSION_MAJOR, HW_VERSION_MINOR, FW_VERSION_MAJOR, FW_VERSION_MINOR);
             break;
 
+        case CMD_SELF_TEST:
+            selfTest();
+            sprintf(TX2buffer, "Self Test Complete\r\n");
+            break;
             
         default:
             CommandHandlerStatus = BAD_STATE;
@@ -526,3 +532,70 @@ COM_ERRORS HandleTemperatureCommand(uint8 *CommandString, uint8 *TXbuffer)
     return returnvalue;        
 }
 
+
+void selfTest(void)
+{
+    while(TX2enabled);
+    sprintf(TX2buffer, "****\r\nSelf test at up counts: %lu\r\n", SystemTicks);
+    kickU2TX();
+    while(TX2enabled);
+    if(barometerStatus == PERIPHERAL_OK)
+    {
+        sprintf(TX2buffer, "Barometer OK\r\n");                
+    }
+    else
+    {
+        sprintf(TX2buffer, "Barometer Error\r\n");        
+    }
+    kickU2TX();
+
+    while(TX2enabled);
+    
+    if(accelTest() == RETURN_SUCCESS)
+    {
+        sprintf(TX2buffer, "Accel OK\r\n");
+    }
+    else
+    {
+        sprintf(TX2buffer, "Accel Error\r\n");        
+    }
+    kickU2TX();
+
+    while(TX2enabled);
+    
+    if(magTest() == RETURN_SUCCESS)
+    {
+        sprintf(TX2buffer, "Mag OK\r\n");
+    }
+    else
+    {
+        sprintf(TX2buffer, "Mag Error\r\n");        
+    }
+    kickU2TX();
+
+    while(TX2enabled);        
+    if(eepTest(EEP_1) == RETURN_SUCCESS)
+    {
+        sprintf(TX2buffer, "EEP 1 OK\r\n");        
+    }
+    else
+    {
+        sprintf(TX2buffer, "EEP 1 error\r\n");        
+    }
+    
+    kickU2TX();
+
+    while(TX2enabled);        
+    if(eepTest(EEP_2) == RETURN_SUCCESS)
+    {
+        sprintf(TX2buffer, "EEP 2 OK\r\n");        
+    }
+    else
+    {
+        sprintf(TX2buffer, "EEP 2 error\r\n");        
+    }
+    kickU2TX();
+
+    while(TX2enabled);        
+        
+}

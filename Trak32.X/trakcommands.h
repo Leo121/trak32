@@ -29,7 +29,8 @@ typedef enum{
     CMD_MOTOR = 'M',
     CMD_DIGITS = 'D',
     CMD_TEMPERATURE = 'T',
-    CMD_ODOMETER = 'R'
+    CMD_ODOMETER = 'R',
+    CMD_SELF_TEST = 'Z'
 }TRAK_COMMANDS;
 
 typedef enum{
@@ -89,7 +90,7 @@ extern COM_ERRORS HandleAccelCommand(uint8 *CommandString, uint8 *TXbuffer);
 extern COM_ERRORS HandleBaroCommand(uint8 *CommandString, uint8 *TXbuffer);
 extern COM_ERRORS HandleMagnetometerCommand(uint8 *CommandString, uint8 *TXbuffer);
 extern COM_ERRORS HandleTemperatureCommand(uint8 *CommandString, uint8 *TXbuffer);
-
+extern void selfTest(void);
 
 #ifdef	__cplusplus
 }

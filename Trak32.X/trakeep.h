@@ -12,6 +12,8 @@
 extern "C" {
 #endif
 
+#include "common.h"    
+    
 #define EEP_CS_ENABLE   0
 #define EEP_CS_DISABLE  1    
     
@@ -29,11 +31,20 @@ extern "C" {
 #define EEP_RDID_COMMAND    0b10101011      //relase from deep power down/read ESN
 #define EEP_DPD_COMMAND     0b10111001      //deep power down
    
+    
+typedef enum{
+    EEP_1,
+    EEP_2
+}EEP_SELECT_T;    
+    
+    
 extern void initEEPspi(void);
-extern void spiEEPread(uint16 endingAddressOffset, uint16 beginningAddress, uint8 *databuffer);
-extern void spiEEPwrite(uint16 endingAddressOffset, uint16 beginningAddress, uint8 *databuffer);
+extern void spiEEPread(EEP_SELECT_T eepNum, uint16 endingAddressOffset, uint16 beginningAddress, uint8 *databuffer);
+extern void spiEEPwrite(EEP_SELECT_T eepNum, uint16 endingAddressOffset, uint16 beginningAddress, uint8 *databuffer);
 extern uint16 blockToAddress(uint8 blockNumber);
-extern void spiEEPpageErase(uint16 beginningAddress);
+extern void spiEEPpageErase(EEP_SELECT_T eepNum, uint16 beginningAddress);
+extern RETURN_T eepTest(EEP_SELECT_T eepNum);
+
 
 #ifdef	__cplusplus
 }

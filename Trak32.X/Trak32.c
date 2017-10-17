@@ -9,7 +9,7 @@
 #include "trakserial.h"
 #include "trakcommands.h"
 #include "trak-ints.h"
-
+#include "trakaccel.h"
 
 // Configuration Section
 #ifndef OVERRIDE_CONFIG_BITS
@@ -49,6 +49,8 @@
 
 #endif // OVERRIDE_CONFIG_BITS
 
+#define VERBOSE_BOOT
+
 
 void checkComChannels(void);
 void checkSampleTimers(void);
@@ -78,7 +80,11 @@ int main(void)
     
     sprintf(TX2buffer, "Boot!\r\n");
     kickU2TX();
-  
+    
+#ifdef VERBOSE_BOOT
+    selfTest();
+#endif
+            
     MasterStateCtr = MASTER_COUNT_TICKS;
     AnalogSampleCtr = ANALOG_SAMPLE_TICKS;
       
@@ -118,8 +124,6 @@ void masterStateMachine(void)
     MasterStateCtr = MASTER_COUNT_TICKS;
     
 }
-
-
 
 
 
